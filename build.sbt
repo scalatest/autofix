@@ -2,7 +2,7 @@ lazy val V = _root_.scalafix.sbt.BuildInfo
 inThisBuild(
   List(
     organization := "org.scalatest",
-    homepage := Some(url("https://github.com/olafurpg/named-literal-arguments")),
+    homepage := Some(url("https://github.com/scalatest/scalatestplus-scalafix")),
     licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
     developers := List(
       Developer(

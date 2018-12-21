@@ -1,15 +1,10 @@
 /*
 rule = RenamePackage
-NoLiteralArguments.disabledLiterals = [
-  Int
-  String
-  Boolean
-]
  */
 package test
 
 import org.scalatest._
-import org.scalatest.check._
+import org.scalatest.prop._
 
 class RenameCheckersSpec2 extends FunSuite with Checkers {
   
