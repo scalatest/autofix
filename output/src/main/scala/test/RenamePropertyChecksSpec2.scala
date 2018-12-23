@@ -2,7 +2,7 @@ package test
 
 import org.scalatest._
 import org.scalatest.prop._
-import org.scalatest.check.ScalaCheckPropertyChecks
+import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 
 class RenamePropertyChecksSpec2 extends FunSuite with ScalaCheckPropertyChecks with Matchers {
 

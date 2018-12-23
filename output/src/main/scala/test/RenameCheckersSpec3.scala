@@ -1,7 +1,7 @@
 package test
 
 import org.scalatest._
-import org.scalatest.check.Checkers
+import org.scalatestplus.scalacheck.Checkers
 
 class RenameCheckersSpec3 extends FunSuite with Checkers {
   
