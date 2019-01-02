@@ -4,11 +4,11 @@ rule = RenamePackage
 package test
 
 import org.scalatest._
-import org.scalatest.jmock.JMockCycleFixture
+import org.scalatest.jmock.{JMockCycleFixture, JMockCycle}
 
 class RenameJMockCycleSpec extends fixture.FunSuite with JMockCycleFixture {
 
-  test("test example") { cycle =>
+  test("test example") { cycle: JMockCycle =>
     import cycle._
     trait OneFish {
       def eat(food: String): Unit = ()

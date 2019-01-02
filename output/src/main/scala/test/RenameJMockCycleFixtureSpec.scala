@@ -1,11 +1,11 @@
 package test
 
 import org.scalatest._
-import org.scalatestplus.jmock.{ JMockCycle, JMockCycleFixture }
+import org.scalatestplus.jmock.JMockCycleFixture
 
-class RenameJMockCycleSpec extends fixture.FunSuite with JMockCycleFixture {
+class RenameJMockCycleFixtureSpec extends fixture.FunSuite with JMockCycleFixture {
 
-  test("test example") { cycle: JMockCycle =>
+  test("test example") { cycle =>
     import cycle._
     trait OneFish {
       def eat(food: String): Unit = ()
