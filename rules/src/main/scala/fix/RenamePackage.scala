@@ -16,7 +16,8 @@ class RenamePackage extends SemanticRule("RenamePackage") {
       "org.scalatest.jmock.JMockCycleFixture" -> "org.scalatestplus.jmock.JMockCycleFixture",
       "org.scalatest.jmock.JMockCycle" -> "org.scalatestplus.jmock.JMockCycle",
       "org.scalatest.jmock.JMockExpectations" -> "org.scalatestplus.jmock.JMockExpectations",
-      "org.scalatest.mockito.MockitoSugar" -> "org.scalatestplus.mockito.MockitoSugar"
+      "org.scalatest.mockito.MockitoSugar" -> "org.scalatestplus.mockito.MockitoSugar",
+      "org.scalatest.selenium.Page" -> "org.scalatestplus.selenium.Page"
     )
   }
 
