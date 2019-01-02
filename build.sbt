@@ -30,19 +30,25 @@ lazy val rules = project.settings(
 lazy val input = project.settings(
   skip in publish := true,
   libraryDependencies ++=
-    Seq("org.scalatest" %% "scalatest" % "3.0.6-SNAP-for-scalafix",
-        "org.scalacheck" %% "scalacheck" % "1.14.0",
-        "org.easymock" % "easymockclassextension" % "3.2",
-        "org.jmock" % "jmock-legacy" % "2.8.3")
+    Seq(
+      "org.scalatest" %% "scalatest" % "3.0.6-SNAP-for-scalafix",
+      "org.scalacheck" %% "scalacheck" % "1.14.0",
+      "org.easymock" % "easymockclassextension" % "3.2",
+      "org.jmock" % "jmock-legacy" % "2.8.3",
+      "org.mockito" % "mockito-core" % "1.10.19"
+    )
 )
 
 lazy val output = project.settings(
   skip in publish := true,
   libraryDependencies ++=
-    Seq("org.scalatest" %% "scalatest" % "3.0.6-SNAP-for-scalafix",
-        "org.scalacheck" %% "scalacheck" % "1.14.0",
-        "org.easymock" % "easymockclassextension" % "3.2",
-        "org.jmock" % "jmock-legacy" % "2.8.3")
+    Seq(
+      "org.scalatest" %% "scalatest" % "3.0.6-SNAP-for-scalafix",
+      "org.scalacheck" %% "scalacheck" % "1.14.0",
+      "org.easymock" % "easymockclassextension" % "3.2",
+      "org.jmock" % "jmock-legacy" % "2.8.3",
+      "org.mockito" % "mockito-core" % "1.10.19"
+    )
 )
 
 lazy val tests = project
