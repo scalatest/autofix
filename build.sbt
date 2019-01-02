@@ -31,14 +31,16 @@ lazy val input = project.settings(
   skip in publish := true,
   libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.6-SNAP-for-scalafix",
   libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.0",
-  libraryDependencies += "org.easymock" % "easymockclassextension" % "3.2"
+  libraryDependencies += "org.easymock" % "easymockclassextension" % "3.2",
+  libraryDependencies += "org.jmock" % "jmock-legacy" % "2.8.3"
 )
 
 lazy val output = project.settings(
   skip in publish := true,
   libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.6-SNAP-for-scalafix",
   libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.0",
-  libraryDependencies += "org.easymock" % "easymockclassextension" % "3.2"
+  libraryDependencies += "org.easymock" % "easymockclassextension" % "3.2",
+  libraryDependencies += "org.jmock" % "jmock-legacy" % "2.8.3"
 )
 
 lazy val tests = project
