@@ -10,7 +10,8 @@ class RenamePackage extends SemanticRule("RenamePackage") {
     Patch.replaceSymbols(
       "org.scalatest.prop.Checkers" -> "org.scalatestplus.scalacheck.Checkers",
       "org.scalatest.prop.PropertyChecks" -> "org.scalatestplus.scalacheck.ScalaCheckPropertyChecks",
-      "org.scalatest.prop.GeneratorDrivenPropertyChecks" -> "org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks"
+      "org.scalatest.prop.GeneratorDrivenPropertyChecks" -> "org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks",
+      "org.scalatest.easymock.EasyMockSugar" -> "org.scalatestplus.easymock.EasyMockSugar"
     )
   }
 
