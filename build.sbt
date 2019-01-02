@@ -35,7 +35,8 @@ lazy val input = project.settings(
       "org.scalacheck" %% "scalacheck" % "1.14.0",
       "org.easymock" % "easymockclassextension" % "3.2",
       "org.jmock" % "jmock-legacy" % "2.8.3",
-      "org.mockito" % "mockito-core" % "1.10.19"
+      "org.mockito" % "mockito-core" % "1.10.19",
+      "org.seleniumhq.selenium" % "selenium-java" % "2.45.0"
     )
 )
 
@@ -47,7 +48,8 @@ lazy val output = project.settings(
       "org.scalacheck" %% "scalacheck" % "1.14.0",
       "org.easymock" % "easymockclassextension" % "3.2",
       "org.jmock" % "jmock-legacy" % "2.8.3",
-      "org.mockito" % "mockito-core" % "1.10.19"
+      "org.mockito" % "mockito-core" % "1.10.19",
+      "org.seleniumhq.selenium" % "selenium-java" % "2.45.0"
     )
 )
 
