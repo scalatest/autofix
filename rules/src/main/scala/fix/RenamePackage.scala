@@ -14,7 +14,8 @@ class RenamePackage extends SemanticRule("RenamePackage") {
       "org.scalatest.easymock.EasyMockSugar" -> "org.scalatestplus.easymock.EasyMockSugar",
       "org.scalatest.jmock.AsyncJMockCycleFixture" -> "org.scalatestplus.jmock.AsyncJMockCycleFixture",
       "org.scalatest.jmock.JMockCycleFixture" -> "org.scalatestplus.jmock.JMockCycleFixture",
-      "org.scalatest.jmock.JMockCycle" -> "org.scalatestplus.jmock.JMockCycle"
+      "org.scalatest.jmock.JMockCycle" -> "org.scalatestplus.jmock.JMockCycle",
+      "org.scalatest.jmock.JMockExpectations" -> "org.scalatestplus.jmock.JMockExpectations"
     )
   }
 
