@@ -21,7 +21,8 @@ class RenamePackage extends SemanticRule("RenamePackage") {
       "org.scalatest.selenium.WebBrowser" -> "org.scalatestplus.selenium.WebBrowser",
       "org.scalatest.selenium.HtmlUnit" -> "org.scalatestplus.selenium.HtmlUnit",
       "org.scalatest.selenium.Driver" -> "org.scalatestplus.selenium.Driver",
-      "org.scalatest.selenium.Firefox" -> "org.scalatestplus.selenium.Firefox"
+      "org.scalatest.selenium.Firefox" -> "org.scalatestplus.selenium.Firefox",
+      "org.scalatest.selenium.Safari" -> "org.scalatestplus.selenium.Safari"
     )
   }
 
