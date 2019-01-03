@@ -19,7 +19,8 @@ class RenamePackage extends SemanticRule("RenamePackage") {
       "org.scalatest.mockito.MockitoSugar" -> "org.scalatestplus.mockito.MockitoSugar",
       "org.scalatest.selenium.Page" -> "org.scalatestplus.selenium.Page",
       "org.scalatest.selenium.WebBrowser" -> "org.scalatestplus.selenium.WebBrowser",
-      "org.scalatest.selenium.HtmlUnit" -> "org.scalatestplus.selenium.HtmlUnit"
+      "org.scalatest.selenium.HtmlUnit" -> "org.scalatestplus.selenium.HtmlUnit",
+      "org.scalatest.selenium.Driver" -> "org.scalatestplus.selenium.Driver"
     )
   }
 
