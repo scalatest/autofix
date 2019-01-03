@@ -25,7 +25,8 @@ class RenamePackage extends SemanticRule("RenamePackage") {
       "org.scalatest.selenium.Safari" -> "org.scalatestplus.selenium.Safari",
       "org.scalatest.selenium.Chrome" -> "org.scalatestplus.selenium.Chrome",
       "org.scalatest.selenium.InternetExplorer" -> "org.scalatestplus.selenium.InternetExplorer",
-      "org.scalatest.junit.AssertionsForJUnit" -> "org.scalatestplus.junit.AssertionsForJUnit"
+      "org.scalatest.junit.AssertionsForJUnit" -> "org.scalatestplus.junit.AssertionsForJUnit",
+      "org.scalatest.junit.JUnit3Suite" -> "org.scalatestplus.junit.JUnit3Suite"
     )
   }
 
