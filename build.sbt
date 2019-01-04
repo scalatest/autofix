@@ -37,7 +37,8 @@ lazy val input = project.settings(
       "org.jmock" % "jmock-legacy" % "2.8.3",
       "org.mockito" % "mockito-core" % "1.10.19",
       "org.seleniumhq.selenium" % "selenium-java" % "2.45.0",
-      "junit" % "junit" % "4.12" % "optional"
+      "junit" % "junit" % "4.12",
+      "org.testng" % "testng" % "6.7"
     )
 )
 
@@ -51,7 +52,8 @@ lazy val output = project.settings(
       "org.jmock" % "jmock-legacy" % "2.8.3",
       "org.mockito" % "mockito-core" % "1.10.19",
       "org.seleniumhq.selenium" % "selenium-java" % "2.45.0",
-      "junit" % "junit" % "4.12" % "optional"
+      "junit" % "junit" % "4.12",
+      "org.testng" % "testng" % "6.7"
     )
 )
 
