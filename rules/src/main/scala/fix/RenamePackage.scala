@@ -30,7 +30,8 @@ class RenamePackage extends SemanticRule("RenamePackage") {
       "org.scalatest.junit.JUnitRunner" -> "org.scalatestplus.junit.JUnitRunner",
       "org.scalatest.junit.JUnitSuite" -> "org.scalatestplus.junit.JUnitSuite",
       "org.scalatest.junit.JUnitSuiteLike" -> "org.scalatestplus.junit.JUnitSuiteLike",
-      "org.scalatest.junit.JUnitTestFailedError" -> "org.scalatestplus.junit.JUnitTestFailedError"
+      "org.scalatest.junit.JUnitTestFailedError" -> "org.scalatestplus.junit.JUnitTestFailedError",
+      "org.scalatest.junit.JUnitWrapperSuite" -> "org.scalatestplus.junit.JUnitWrapperSuite"
     )
   }
 
