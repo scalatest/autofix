@@ -36,7 +36,8 @@ lazy val input = project.settings(
       "org.easymock" % "easymockclassextension" % "3.2",
       "org.jmock" % "jmock-legacy" % "2.8.3",
       "org.mockito" % "mockito-core" % "1.10.19",
-      "org.seleniumhq.selenium" % "selenium-java" % "2.45.0"
+      "org.seleniumhq.selenium" % "selenium-java" % "2.45.0",
+      "junit" % "junit" % "4.12" % "optional"
     )
 )
 
@@ -49,7 +50,8 @@ lazy val output = project.settings(
       "org.easymock" % "easymockclassextension" % "3.2",
       "org.jmock" % "jmock-legacy" % "2.8.3",
       "org.mockito" % "mockito-core" % "1.10.19",
-      "org.seleniumhq.selenium" % "selenium-java" % "2.45.0"
+      "org.seleniumhq.selenium" % "selenium-java" % "2.45.0",
+      "junit" % "junit" % "4.12" % "optional"
     )
 )
 

@@ -4,7 +4,6 @@ rule = RenamePackage
 package test
 
 import org.scalatest._
-import org.scalatest.junit.JUnitRunner
 
 class RenameJUnitRunnerSpec extends FunSuite {
 
