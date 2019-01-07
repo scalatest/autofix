@@ -4,7 +4,7 @@ import metaconfig.Configured
 import scalafix.v1._
 import scala.meta._
 
-class RenamePackage extends SemanticRule("RenamePackage") {
+class RenamePackage extends SemanticRule("ExternalPackagesRename") {
 
   override def fix(implicit doc: SemanticDocument): Patch = {
     Patch.replaceSymbols(

@@ -23,7 +23,8 @@ inThisBuild(
 skip in publish := true
 
 lazy val rules = project.settings(
-  moduleName := "named-literal-arguments",
+  moduleName := "external-packages-rename",
+  version := "1.0.0", 
   libraryDependencies += "ch.epfl.scala" %% "scalafix-core" % V.scalafixVersion
 )
 

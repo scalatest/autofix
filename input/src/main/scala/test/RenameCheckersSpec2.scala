@@ -1,5 +1,5 @@
 /*
-rule = RenamePackage
+rule = ExternalPackagesRename
  */
 package test
 
