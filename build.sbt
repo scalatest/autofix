@@ -23,20 +23,39 @@ inThisBuild(
 skip in publish := true
 
 lazy val rules = project.settings(
-  moduleName := "named-literal-arguments",
+  moduleName := "external-packages-rename",
+  version := "1.0.0", 
   libraryDependencies += "ch.epfl.scala" %% "scalafix-core" % V.scalafixVersion
 )
 
 lazy val input = project.settings(
   skip in publish := true,
-  libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.6-SNAP-for-scalafix",
-  libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.0"
+  libraryDependencies ++=
+    Seq(
+      "org.scalatest" %% "scalatest" % "3.0.6-SNAP-for-scalafix",
+      "org.scalacheck" %% "scalacheck" % "1.14.0",
+      "org.easymock" % "easymockclassextension" % "3.2",
+      "org.jmock" % "jmock-legacy" % "2.8.3",
+      "org.mockito" % "mockito-core" % "1.10.19",
+      "org.seleniumhq.selenium" % "selenium-java" % "2.45.0",
+      "junit" % "junit" % "4.12",
+      "org.testng" % "testng" % "6.7"
+    )
 )
 
 lazy val output = project.settings(
   skip in publish := true,
-  libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.6-SNAP-for-scalafix",
-  libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.0"
+  libraryDependencies ++=
+    Seq(
+      "org.scalatest" %% "scalatest" % "3.0.6-SNAP-for-scalafix",
+      "org.scalacheck" %% "scalacheck" % "1.14.0",
+      "org.easymock" % "easymockclassextension" % "3.2",
+      "org.jmock" % "jmock-legacy" % "2.8.3",
+      "org.mockito" % "mockito-core" % "1.10.19",
+      "org.seleniumhq.selenium" % "selenium-java" % "2.45.0",
+      "junit" % "junit" % "4.12",
+      "org.testng" % "testng" % "6.7"
+    )
 )
 
 lazy val tests = project

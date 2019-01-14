@@ -1,7 +1,7 @@
 package test
 
 import org.scalatest._
-import org.scalatest.check.ScalaCheckDrivenPropertyChecks
+import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 
 class RenameGeneratorDrivenPropertyChecksSpec3 extends FunSuite with ScalaCheckDrivenPropertyChecks with Matchers {
 
