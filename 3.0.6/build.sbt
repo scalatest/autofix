@@ -1,17 +1,6 @@
 lazy val V = _root_.scalafix.sbt.BuildInfo
 inThisBuild(
   List(
-    organization := "org.scalatest",
-    homepage := Some(url("https://github.com/scalatest/scalatestplus-scalafix")),
-    licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
-    developers := List(
-      Developer(
-        "bvenners",
-        "Bill Venners",
-        "bill@artima.com",
-        url("https://www.artima.com")
-      )
-    ),
     scalaVersion := V.scala212,
     addCompilerPlugin(scalafixSemanticdb),
     scalacOptions ++= List(
@@ -23,8 +12,19 @@ inThisBuild(
 skip in publish := true
 
 lazy val rules = project.settings(
-  moduleName := "external-packages-rename",
-  version := "1.0.0", 
+  moduleName := "fix-3.0.6",
+  version := "1.0.0",
+  organization := "org.scalatest",
+    homepage := Some(url("https://github.com/scalatest/scalatestplus-scalafix")),
+    licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
+    developers := List(
+      Developer(
+        "bvenners",
+        "Bill Venners",
+        "bill@artima.com",
+        url("https://www.artima.com")
+      )
+    ), 
   libraryDependencies += "ch.epfl.scala" %% "scalafix-core" % V.scalafixVersion
 )
 
