@@ -1,5 +1,5 @@
 /*
-rule = ExternalPackagesRename
+rule = RenameDeprecatedPackage
  */
 package test
 

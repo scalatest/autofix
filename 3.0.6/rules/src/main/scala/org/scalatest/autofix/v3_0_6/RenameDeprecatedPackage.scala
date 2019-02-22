@@ -1,10 +1,10 @@
-package fix
+package org.scalatest.autofix.v3_0_6
 
 import metaconfig.Configured
 import scalafix.v1._
 import scala.meta._
 
-class RenamePackage extends SemanticRule("ExternalPackagesRename") {
+class RenameDeprecatedPackage extends SemanticRule("RenameDeprecatedPackage") {
 
   override def fix(implicit doc: SemanticDocument): Patch = {
     Patch.replaceSymbols(

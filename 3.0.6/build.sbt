@@ -12,7 +12,7 @@ inThisBuild(
 skip in publish := true
 
 lazy val rules = project.settings(
-  moduleName := "fix-3.0.6",
+  moduleName := "autofix-3.0.6",
   version := "1.0.0",
   organization := "org.scalatest",
     homepage := Some(url("https://github.com/scalatest/scalatestplus-scalafix")),
