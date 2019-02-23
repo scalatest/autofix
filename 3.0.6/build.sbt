@@ -13,7 +13,8 @@ skip in publish := true
 
 lazy val rules = project.settings(
   moduleName := "autofix-3.0.6",
-  version := "1.0.0",
+  version := "1.0.0-SNAP1",
+  crossScalaVersions := List("2.12.8", "2.11.12"),
   organization := "org.scalatest",
     homepage := Some(url("https://github.com/scalatest/scalatestplus-scalafix")),
     licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
@@ -22,17 +23,33 @@ lazy val rules = project.settings(
         "bvenners",
         "Bill Venners",
         "bill@artima.com",
-        url("https://www.artima.com")
+        url("https://github.com/bvenners")
+      ),
+      Developer(
+        "cheeseng",
+        "Chua Chee Seng",
+        "cheeseng@amaseng.com",
+        url("https://github.com/cheeseng")
       )
     ), 
-  libraryDependencies += "ch.epfl.scala" %% "scalafix-core" % V.scalafixVersion
+    libraryDependencies += "ch.epfl.scala" %% "scalafix-core" % V.scalafixVersion, 
+    publishTo := {
+      val nexus = "https://oss.sonatype.org/"
+      Some("publish-releases" at nexus + "service/local/staging/deploy/maven2")
+    },
+    publishMavenStyle := true,
+    publishArtifact in Test := false,
+    pomIncludeRepository := { _ => false },
+    credentials += Credentials(Path.userHome / ".ivy2" / ".credentials"),
+    pgpSecretRing := file((Path.userHome / ".gnupg" / "secring.gpg").getAbsolutePath),
+    pgpPassphrase := None
 )
 
 lazy val input = project.settings(
   skip in publish := true,
   libraryDependencies ++=
     Seq(
-      "org.scalatest" %% "scalatest" % "3.0.6-SNAP-for-scalafix",
+      "org.scalatest" %% "scalatest" % "3.0.6-SNAP6",
       "org.scalacheck" %% "scalacheck" % "1.14.0",
       "org.easymock" % "easymockclassextension" % "3.2",
       "org.jmock" % "jmock-legacy" % "2.8.3",
@@ -47,7 +64,7 @@ lazy val output = project.settings(
   skip in publish := true,
   libraryDependencies ++=
     Seq(
-      "org.scalatest" %% "scalatest" % "3.0.6-SNAP-for-scalafix",
+      "org.scalatest" %% "scalatest" % "3.0.6-SNAP6",
       "org.scalacheck" %% "scalacheck" % "1.14.0",
       "org.easymock" % "easymockclassextension" % "3.2",
       "org.jmock" % "jmock-legacy" % "2.8.3",
