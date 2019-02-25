@@ -16,7 +16,7 @@ lazy val rules = project.settings(
   version := "1.0.0-SNAP1",
   crossScalaVersions := List("2.12.8", "2.11.12"),
   organization := "org.scalatest",
-    homepage := Some(url("https://github.com/scalatest/scalatestplus-scalafix")),
+    homepage := Some(url("https://github.com/scalatest/autofix")),
     licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
     developers := List(
       Developer(
