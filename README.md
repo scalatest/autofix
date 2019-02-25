@@ -1,6 +1,6 @@
-# scalatestplus-scalafix
+# ScalaTest Autofix
 Auto-fixing error due to version upgrade, good practice etc.
 
-This project took inspiration from: 
+This project is based on Scalafix: 
 
-https://github.com/olafurpg/named-literal-arguments
+https://github.com/scalacenter/scalafix 
