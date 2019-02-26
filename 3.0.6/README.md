@@ -16,10 +16,16 @@ scalafixDependencies in ThisBuild += "org.scalatest" %% "autofix-3.0.6" % "1.0.0
 addCompilerPlugin(scalafixSemanticdb) // enable SemanticDB
 ``` 
 
-  - In sbt prompt, issue the following command to have the autofix applied: 
+  - In sbt prompt, issue the following command to have the autofix applied to your test source files: 
+  
+```
+sbt> test:scalafix RenameDeprecatedPackage
+```
+
+  - In case you need to apply it to your main source files, you'll issue the following command instead: 
   
 ```
 sbt> scalafix RenameDeprecatedPackage
-```    
+```  
 
   - Check the changes made with `git diff`.
