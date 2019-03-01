@@ -13,7 +13,7 @@ skip in publish := true
 
 lazy val rules = project.settings(
   moduleName := "autofix-3.0.6",
-  version := "1.0.0-SNAP1",
+  version := "1.0.0",
   crossScalaVersions := List("2.12.8", "2.11.12"),
   organization := "org.scalatest",
     homepage := Some(url("https://github.com/scalatest/autofix")),
