@@ -1,4 +1,4 @@
-package org.scalatest.autofix.v3_0_6
+package org.scalatest.autofix
 
 import metaconfig.Configured
 import scalafix.v1._
