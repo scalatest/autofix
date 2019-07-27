@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.featurespec
 
 import org.scalatest._
 import org.scalatest.featurespec.AnyFeatureSpec
@@ -26,7 +26,7 @@ class TVSet {
   }
 }
 
-class ReplaceFeatureSpec extends AnyFeatureSpec with GivenWhenThen {
+class TVSetSpec extends AnyFeatureSpec with GivenWhenThen {
 
   info("As a TV set owner")
   info("I want to be able to turn the TV on and off")

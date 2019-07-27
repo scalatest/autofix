@@ -20,6 +20,14 @@ package test
 
 import org.scalatest._
 
+class TVSet {
+  private var on: Boolean = false
+  def isOn: Boolean = on
+  def pressPowerButton() {
+    on = !on
+  }
+}
+
 class ReplaceFeatureSpecLike extends FeatureSpecLike with GivenWhenThen {
 
   info("As a TV set owner")
