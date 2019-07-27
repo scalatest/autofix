@@ -2,7 +2,7 @@
 rule = RewriteDeprecatedNames
  */
 /*
- * Copyright 2001-2013 Artima, Inc.
+ * Copyright 2001-2015 Artima, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,29 +16,33 @@ rule = RewriteDeprecatedNames
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.asyncfunspec
 
-import org.scalatest.AsyncFunSuiteLike
+import org.scalatest.AsyncFunSpec
 import scala.concurrent.Future
 
-class ReplaceAsyncFunSuiteLike extends AsyncFunSuiteLike {
+class ReplaceAsyncFunSpec extends AsyncFunSpec {
 
   def addSoon(addends: Int*): Future[Int] = Future { addends.sum }
 
-  test("addSoon will eventually compute a sum of passed Ints") {
-    val futureSum: Future[Int] = addSoon(1, 2)
-    // You can map assertions onto a Future, then return
-    // the resulting Future[Assertion] to ScalaTest:
-    futureSum map { sum => assert(sum == 3) }
-  } 
+  describe("addSoon") {
+    it("will eventually compute a sum of passed Ints") {
+      val futureSum: Future[Int] = addSoon(1, 2)
+      // You can map assertions onto a Future, then return
+      // the resulting Future[Assertion] to ScalaTest:
+      futureSum map { sum => assert(sum == 3) }
+    }
+  }
 
   def addNow(addends: Int*): Int = addends.sum
 
-  test("addNow will immediately compute a sum of passed Ints") {
-    val sum: Int = addNow(1, 2)
-    // You can also write synchronous tests. The body
-    // must have result type Assertion:
-    assert(sum == 3)
+  describe("addNow") {
+    it("will immediately compute a sum of passed Ints") {
+      val sum: Int = addNow(1, 2)
+      // You can also write synchronous tests. The body
+      // must have result type Assertion:
+      assert(sum == 3)
+    }
   }
 }
 

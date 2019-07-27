@@ -16,33 +16,31 @@ rule = RewriteDeprecatedNames
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.asyncflatspec
 
-import org.scalatest.AsyncFunSpecLike
+import org.scalatest.AsyncFlatSpec
 import scala.concurrent.Future
 
-class ReplaceAsyncFunSpecLike extends AsyncFunSpecLike {
+class ReplaceAsyncFlatSpec extends AsyncFlatSpec {
 
   def addSoon(addends: Int*): Future[Int] = Future { addends.sum }
 
-  describe("addSoon") {
-    it("will eventually compute a sum of passed Ints") {
-      val futureSum: Future[Int] = addSoon(1, 2)
-      // You can map assertions onto a Future, then return
-      // the resulting Future[Assertion] to ScalaTest:
-      futureSum map { sum => assert(sum == 3) }
-    }
+  behavior of "addSoon"
+    
+  it should "eventually compute a sum of passed Ints" in {
+    val futureSum: Future[Int] = addSoon(1, 2)
+    // You can map assertions onto a Future, then return
+    // the resulting Future[Assertion] to ScalaTest:
+    futureSum map { sum => assert(sum == 3) }
   }
 
   def addNow(addends: Int*): Int = addends.sum
 
-  describe("addNow") {
-    it("will immediately compute a sum of passed Ints") {
-      val sum: Int = addNow(1, 2)
-      // You can also write synchronous tests. The body
-      // must have result type Assertion:
-      assert(sum == 3)
-    }
+  "addNow" should "immediately compute a sum of passed Ints" in {
+    val sum: Int = addNow(1, 2)
+    // You can also write synchronous tests. The body
+    // must have result type Assertion:
+    assert(sum == 3)
   }
 }
 

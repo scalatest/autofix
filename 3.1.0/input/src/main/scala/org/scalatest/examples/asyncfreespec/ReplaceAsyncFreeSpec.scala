@@ -16,7 +16,7 @@ rule = RewriteDeprecatedNames
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.asyncfreespec
 
 import org.scalatest.AsyncFreeSpec
 import scala.concurrent.Future

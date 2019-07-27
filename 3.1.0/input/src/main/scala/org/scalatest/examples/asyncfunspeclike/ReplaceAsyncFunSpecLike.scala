@@ -1,4 +1,7 @@
 /*
+rule = RewriteDeprecatedNames
+ */
+/*
  * Copyright 2001-2015 Artima, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,17 +16,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.asyncfunspeclike
 
+import org.scalatest.AsyncFunSpecLike
 import scala.concurrent.Future
-import org.scalatest.freespec.AsyncFreeSpec
 
-class ReplaceAsyncFreeSpec extends AsyncFreeSpec {
+class ReplaceAsyncFunSpecLike extends AsyncFunSpecLike {
 
   def addSoon(addends: Int*): Future[Int] = Future { addends.sum }
 
-  "addSoon" - {
-    "will eventually compute a sum of passed Ints" in {
+  describe("addSoon") {
+    it("will eventually compute a sum of passed Ints") {
       val futureSum: Future[Int] = addSoon(1, 2)
       // You can map assertions onto a Future, then return
       // the resulting Future[Assertion] to ScalaTest:
@@ -33,8 +36,8 @@ class ReplaceAsyncFreeSpec extends AsyncFreeSpec {
 
   def addNow(addends: Int*): Int = addends.sum
 
-  "addNow" - {
-    "will immediately compute a sum of passed Ints" in {
+  describe("addNow") {
+    it("will immediately compute a sum of passed Ints") {
       val sum: Int = addNow(1, 2)
       // You can also write synchronous tests. The body
       // must have result type Assertion:
