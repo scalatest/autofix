@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.wordspec
 
-import org.scalatest.wordspec.AnyWordSpecLike
+import org.scalatest.wordspec.AnyWordSpec
 
-class ReplaceWordSpecLike extends AnyWordSpecLike {
+class ReplaceWordSpec extends AnyWordSpec {
 
   "A Set" when {
     "empty" should {
