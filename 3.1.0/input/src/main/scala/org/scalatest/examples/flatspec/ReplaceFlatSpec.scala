@@ -1,4 +1,7 @@
 /*
+rule = RewriteDeprecatedNames
+ */
+/*
  * Copyright 2001-2013 Artima, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,11 +16,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.flatspec
 
-import org.scalatest.flatspec.AnyFlatSpecLike
+import org.scalatest.FlatSpec
 
-class ReplaceFlatSpecLike extends AnyFlatSpecLike {
+class ReplaceFlatSpec extends FlatSpec {
   
   "An empty Set" should "have size 0" in {
     assert(Set.empty.size === 0)
