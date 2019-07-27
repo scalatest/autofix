@@ -20,7 +20,7 @@ package org.scalatest.examples.wordspeclike
 
 import org.scalatest.WordSpecLike
 
-class ReplaceWordSpecLike extends WordSpecLike {
+class ReplaceWordSpec extends WordSpecLike {
 
   "A Set" when {
     "empty" should {
