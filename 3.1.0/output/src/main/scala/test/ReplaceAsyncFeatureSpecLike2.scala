@@ -15,10 +15,53 @@
  */
 package test
 
+import org.scalatest._
 import scala.concurrent.Future
+import scala.concurrent.ExecutionContext
 import org.scalatest.featurespec.AsyncFeatureSpecLike
 
-class ReplaceAsyncFeatureSpecLike extends AsyncFeatureSpecLike {
+class ReplaceAsyncFeatureSpecLike2 extends AsyncFeatureSpecLike with GivenWhenThen {
+
+  implicit override def executionContext =
+    scala.concurrent.ExecutionContext.Implicits.global
+
+  info("As a TV set owner")
+  info("I want to be able to turn the TV on and off")
+  info("So I can watch TV when I want")
+  info("And save energy when I'm not watching TV")
+
+  feature("TV power button") {
+    scenario("User presses power button when TV is off") {
+
+      Given("a TV set that is switched off")
+      val tvSetActor = new TVSetActor
+
+      When("the power button is pressed")
+      tvSetActor ! PressPowerButton
+
+      Then("the TV should switch on")
+      val futureBoolean = tvSetActor ? IsOn
+      futureBoolean map { isOn => assert(isOn) }
+    }
+
+    scenario("User presses power button when TV is on") {
+
+      Given("a TV set that is switched on")
+      val tvSetActor = new TVSetActor
+      tvSetActor ! PressPowerButton
+
+      When("the power button is pressed")
+      tvSetActor ! PressPowerButton
+
+      Then("the TV should switch off")
+      val futureBoolean = tvSetActor ? IsOn
+      futureBoolean map { isOn => assert(!isOn) }
+    }
+  }
+}
+
+/*
+class TVSpec extends AsyncFeatureSpec {
 
   def addSoon(addends: Int*): Future[Int] = Future { addends.sum }
   def addNow(addends: Int*): Int = addends.sum
@@ -41,3 +84,4 @@ class ReplaceAsyncFeatureSpecLike extends AsyncFeatureSpecLike {
   }
 }
 
+*/
