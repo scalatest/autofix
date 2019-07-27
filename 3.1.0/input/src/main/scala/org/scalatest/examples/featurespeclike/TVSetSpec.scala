@@ -1,4 +1,7 @@
 /*
+rule = RewriteDeprecatedNames
+ */
+/*
  * Copyright 2001-2013 Artima, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,10 +16,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.featurespeclike
 
 import org.scalatest._
-import org.scalatest.featurespec.AnyFeatureSpecLike
 
 class TVSet {
   private var on: Boolean = false
@@ -26,7 +28,7 @@ class TVSet {
   }
 }
 
-class ReplaceFeatureSpecLike extends AnyFeatureSpecLike with GivenWhenThen {
+class TVSetSpec extends FeatureSpecLike with GivenWhenThen {
 
   info("As a TV set owner")
   info("I want to be able to turn the TV on and off")
