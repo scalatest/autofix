@@ -1,4 +1,7 @@
 /*
+rule = RewriteDeprecatedNames
+ */
+/*
  * Copyright 2001-2013 Artima, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,16 +16,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.propspec
 
 import org.scalatest._
 import prop._
 import scala.collection.immutable._
 import java.util.NoSuchElementException
-import org.scalatest.matchers.should.Matchers
-import org.scalatest.propspec.AnyPropSpecLike
 
-class ReplacePropSpecLike extends AnyPropSpecLike with TableDrivenPropertyChecks with Matchers {
+class ReplacePropSpec extends PropSpec with TableDrivenPropertyChecks with Matchers {
 
   val examples =
     Table(
