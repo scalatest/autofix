@@ -1,4 +1,7 @@
 /*
+rule = RewriteDeprecatedNames
+ */
+/*
  * Copyright 2001-2013 Artima, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,11 +16,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.freespec
 
-import org.scalatest.freespec.AnyFreeSpec
+import org.scalatest.FreeSpec
 
-class ReplaceFreeSpec extends AnyFreeSpec {
+class ReplaceFreeSpec extends FreeSpec {
 
   "A Set" - {
     "when empty" - {
