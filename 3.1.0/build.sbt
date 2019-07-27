@@ -12,7 +12,7 @@ inThisBuild(
 skip in publish := true
 
 lazy val rules = project.settings(
-  moduleName := "autofix-3.0.6",
+  moduleName := "autofix-3.1.0",
   version := "1.0.0",
   crossScalaVersions := List("2.13.0", "2.12.8", "2.11.12"),
   organization := "org.scalatest",
