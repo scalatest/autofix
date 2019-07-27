@@ -75,29 +75,3 @@ class ReplaceAsyncFeatureSpec2 extends AsyncFeatureSpec with GivenWhenThen {
     }
   }
 }
-
-/*
-class TVSpec extends AsyncFeatureSpec {
-
-  def addSoon(addends: Int*): Future[Int] = Future { addends.sum }
-  def addNow(addends: Int*): Int = addends.sum
-
-  feature("The add methods") {
-
-    scenario("addSoon will eventually compute a sum of passed Ints") {
-      val futureSum: Future[Int] = addSoon(1, 2)
-      // You can map assertions onto a Future, then return
-      // the resulting Future[Assertion] to ScalaTest:
-      futureSum map { sum => assert(sum == 3) }
-    }
-
-    scenario("addNow will immediately compute a sum of passed Ints") {
-      val sum: Int = addNow(1, 2)
-      // You can also write synchronous tests. The body
-      // must have result type Assertion:
-      assert(sum == 3)
-    }
-  }
-}
-
-*/
