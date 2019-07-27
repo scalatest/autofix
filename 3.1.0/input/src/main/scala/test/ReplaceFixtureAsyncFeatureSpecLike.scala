@@ -1,3 +1,3 @@
 /*
-rule = RenameDeprecatedPackage
+rule = RewriteDeprecatedNames
  */
