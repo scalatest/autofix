@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.funspeclike
 
-import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.funspec.AnyFunSpecLike
 
-class ReplaceFunSpec extends AnyFunSpec {
+class ReplaceFunSpecLike extends AnyFunSpecLike {
 
   describe("A Set") {
     describe("when empty") {
