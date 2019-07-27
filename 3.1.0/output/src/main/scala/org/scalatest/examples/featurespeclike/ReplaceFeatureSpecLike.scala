@@ -26,7 +26,7 @@ class TVSet {
   }
 }
 
-class TVSetSpec extends AnyFeatureSpecLike with GivenWhenThen {
+class ReplaceFeatureSpecLike extends AnyFeatureSpecLike with GivenWhenThen {
 
   info("As a TV set owner")
   info("I want to be able to turn the TV on and off")
