@@ -1,4 +1,7 @@
 /*
+rule = RewriteDeprecatedNames
+ */
+/*
  * Copyright 2001-2015 Artima, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,12 +16,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.asyncfeaturespec
 
+import org.scalatest.AsyncFeatureSpec
 import scala.concurrent.Future
-import org.scalatest.featurespec.AsyncFeatureSpecLike
 
-class ReplaceAsyncFeatureSpecLike extends AsyncFeatureSpecLike {
+class ReplaceAsyncFeatureSpec extends AsyncFeatureSpec {
 
   def addSoon(addends: Int*): Future[Int] = Future { addends.sum }
   def addNow(addends: Int*): Int = addends.sum

@@ -16,12 +16,12 @@ rule = RewriteDeprecatedNames
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.asyncfeaturespeclike
 
-import org.scalatest.AsyncFeatureSpec
+import org.scalatest.AsyncFeatureSpecLike
 import scala.concurrent.Future
 
-class ReplaceAsyncFeatureSpec extends AsyncFeatureSpec {
+class ReplaceAsyncFeatureSpecLike extends AsyncFeatureSpecLike {
 
   def addSoon(addends: Int*): Future[Int] = Future { addends.sum }
   def addNow(addends: Int*): Int = addends.sum

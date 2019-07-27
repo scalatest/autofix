@@ -1,4 +1,7 @@
 /*
+rule = RewriteDeprecatedNames
+ */
+/*
  * Copyright 2001-2015 Artima, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,12 +16,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package test
+package org.scalatest.examples.asyncfeaturespeclike
 
 import org.scalatest._
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext
-import org.scalatest.featurespec.AsyncFeatureSpecLike
+
+// Defining actor messages
+case object IsOn
+case object PressPowerButton
+
+class TVSetActor { // Simulating an actor
+  private var on: Boolean = false
+  def !(msg: PressPowerButton.type): Unit =
+    synchronized {
+      on = !on
+    }
+  def ?(msg: IsOn.type)(implicit c: ExecutionContext): Future[Boolean] =
+    Future {
+      synchronized { on }
+    }
+}
 
 class ReplaceAsyncFeatureSpecLike2 extends AsyncFeatureSpecLike with GivenWhenThen {
 
