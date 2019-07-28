@@ -1,4 +1,4 @@
-# Autofix for ScalaTest 3.0.6
+# Autofix for ScalaTest 3.0.x
 Auto-fixing error due to version upgrade, good practice etc.
 
 To use this plugin, please follows these steps: 
