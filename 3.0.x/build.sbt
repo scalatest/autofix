@@ -13,8 +13,8 @@ skip in publish := true
 
 lazy val rules = project.settings(
   moduleName := "autofix-3.0.8",
-  version := "1.0.0-SNAP1",
-  crossScalaVersions := List("2.12.8", "2.11.12"),
+  version := "1.0.0",
+  crossScalaVersions := List("2.13.0", "2.12.8", "2.11.12"),
   organization := "org.scalatest",
     homepage := Some(url("https://github.com/scalatest/autofix")),
     licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
@@ -64,7 +64,7 @@ lazy val output = project.settings(
   skip in publish := true,
   libraryDependencies ++=
     Seq(
-      "org.scalatest" %% "scalatest" % "3.0.8-RC3",
+      "org.scalatest" %% "scalatest" % "3.0.8",
       "org.scalacheck" %% "scalacheck" % "1.14.0",
       "org.easymock" % "easymockclassextension" % "3.2",
       "org.jmock" % "jmock-legacy" % "2.8.3",
