@@ -12,9 +12,9 @@ inThisBuild(
 skip in publish := true
 
 lazy val rules = project.settings(
-  moduleName := "autofix-3.0.8",
-  version := "1.0.0",
-  crossScalaVersions := List("2.13.0", "2.12.8", "2.11.12"),
+  moduleName := "autofix",
+  version := "3.0.8-0",
+  crossScalaVersions := List("2.12.8", "2.11.12"),
   organization := "org.scalatest",
     homepage := Some(url("https://github.com/scalatest/autofix")),
     licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
