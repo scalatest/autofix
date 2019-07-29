@@ -1,4 +1,4 @@
-package org.scalatest.autofix.v3_0_6
+package org.scalatest.autofix.v3_0_x
 
 import metaconfig.Configured
 import scalafix.v1._
@@ -34,7 +34,8 @@ class RenameDeprecatedPackage extends SemanticRule("RenameDeprecatedPackage") {
       "org.scalatest.junit.JUnitWrapperSuite" -> "org.scalatestplus.junit.JUnitWrapperSuite",
       "org.scalatest.testng.TestNGSuite" -> "org.scalatestplus.testng.TestNGSuite",
       "org.scalatest.testng.TestNGSuiteLike" -> "org.scalatestplus.testng.TestNGSuiteLike",
-      "org.scalatest.testng.TestNGWrapperSuite" -> "org.scalatestplus.testng.TestNGWrapperSuite"
+      "org.scalatest.testng.TestNGWrapperSuite" -> "org.scalatestplus.testng.TestNGWrapperSuite", 
+      "org.scalatest.enablers.CheckerAsserting" -> "org.scalatestplus.scalacheck.CheckerAsserting"
     )
   }
 
