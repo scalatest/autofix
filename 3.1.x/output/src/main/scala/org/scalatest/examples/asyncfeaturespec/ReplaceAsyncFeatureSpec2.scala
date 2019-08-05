@@ -46,8 +46,8 @@ class ReplaceAsyncFeatureSpec2 extends AsyncFeatureSpec with GivenWhenThen {
   info("So I can watch TV when I want")
   info("And save energy when I'm not watching TV")
 
-  feature("TV power button") {
-    scenario("User presses power button when TV is off") {
+  Feature("TV power button") {
+    Scenario("User presses power button when TV is off") {
 
       Given("a TV set that is switched off")
       val tvSetActor = new TVSetActor
@@ -60,7 +60,7 @@ class ReplaceAsyncFeatureSpec2 extends AsyncFeatureSpec with GivenWhenThen {
       futureBoolean map { isOn => assert(isOn) }
     }
 
-    scenario("User presses power button when TV is on") {
+    Scenario("User presses power button when TV is on") {
 
       Given("a TV set that is switched on")
       val tvSetActor = new TVSetActor

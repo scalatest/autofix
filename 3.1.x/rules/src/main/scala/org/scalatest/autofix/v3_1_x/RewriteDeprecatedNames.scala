@@ -7,7 +7,8 @@ import scala.meta._
 class RewriteDeprecatedNames extends SemanticRule("RewriteDeprecatedNames") {
 
   override def fix(implicit doc: SemanticDocument): Patch = {
-    Patch.replaceSymbols(
+    val replaceDeprecatedClassesPatch =
+      Patch.replaceSymbols(
       "org.scalatest.FunSuiteLike" -> "org.scalatest.funsuite.AnyFunSuiteLike",
       "org.scalatest.FunSuite" -> "org.scalatest.funsuite.AnyFunSuite",
       "org.scalatest.AsyncFunSuiteLike" -> "org.scalatest.funsuite.AsyncFunSuiteLike",
@@ -155,5 +156,26 @@ class RewriteDeprecatedNames extends SemanticRule("RewriteDeprecatedNames") {
       "org.scalactic.Chain" -> "org.scalactic.anyvals.NonEmptyList",
       "org.scalactic.End" -> "org.scalactic.anyvals.End"
     )
+
+    def replaceFunctions(renames: ((String, String), String)*): Patch =
+      renames.map { case ((className, deprecatedFunName), funName) =>
+        doc.tree.collect {
+          case t: Term.Apply if t.symbol.displayName == deprecatedFunName && t.symbol.owner.value == className =>
+            Patch.renameSymbol(t.symbol, funName)
+        }.asPatch
+      }.foldLeft(Patch.empty)(_ + _)
+
+    val replaceDeprecatedMethodsPatch = replaceFunctions(
+      "org/scalatest/featurespec/AnyFeatureSpecLike#" -> "feature" -> "Feature",
+      "org/scalatest/featurespec/AnyFeatureSpecLike#" -> "scenario" -> "Scenario",
+      "org/scalatest/featurespec/FixtureAnyFeatureSpecLike#" -> "feature" -> "Feature",
+      "org/scalatest/featurespec/FixtureAnyFeatureSpecLike#" -> "scenario" -> "Scenario",
+      "org/scalatest/featurespec/AsyncFeatureSpecLike#" -> "feature" -> "Feature",
+      "org/scalatest/featurespec/AsyncFeatureSpecLike#" -> "scenario" -> "Scenario",
+      "org/scalatest/featurespec/FixtureAsyncFeatureSpecLike#" -> "feature" -> "Feature",
+      "org/scalatest/featurespec/FixtureAsyncFeatureSpecLike#" -> "scenario" -> "Scenario"
+    )
+
+    replaceDeprecatedClassesPatch + replaceDeprecatedMethodsPatch
   }
 }
