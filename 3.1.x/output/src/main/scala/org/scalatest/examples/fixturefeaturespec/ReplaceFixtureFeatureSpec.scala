@@ -37,14 +37,14 @@ class ReplaceFixtureFeatureSpec extends featurespec.FixtureAnyFeatureSpec {
     finally writer.close() // clean up the fixture
   }
 
-  feature("Simplicity") {
-    scenario("User needs to read test code written by others") { f =>
+  Feature("Simplicity") {
+    Scenario("User needs to read test code written by others") { f =>
       f.writer.write("encourage clear code!")
       f.writer.flush()
       assert(f.file.length === 49)
     }
 
-    scenario("User needs to understand what the tests are doing") { f =>
+    Scenario("User needs to understand what the tests are doing") { f =>
       f.writer.write("be easy to reason about!")
       f.writer.flush()
       assert(f.file.length === 52)

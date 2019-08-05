@@ -56,8 +56,8 @@ class ReplaceFixtureAsyncFeatureSpecLike extends featurespec.FixtureAsyncFeature
     }
   }
 
-  feature("Simplicity") {
-    scenario("User needs to read test code written by others") { actor =>
+  Feature("Simplicity") {
+    Scenario("User needs to read test code written by others") { actor =>
       actor ! Append("encourage clear code!")
       val futureString = actor ? GetValue
       futureString map { s =>
@@ -65,7 +65,7 @@ class ReplaceFixtureAsyncFeatureSpecLike extends featurespec.FixtureAsyncFeature
       }
     }
 
-    scenario("User needs to understand what the tests are doing") { actor =>
+    Scenario("User needs to understand what the tests are doing") { actor =>
       actor ! Append("be easy to reason about!")
       val futureString = actor ? GetValue
       futureString map { s =>
