@@ -61,4 +61,16 @@ class ReplaceFeatureSpec extends AnyFeatureSpec with GivenWhenThen {
       assert(!tv.isOn)
     }
   }
+
+  def testScenariosFor(): Unit = {
+    Scenario("scenario 1") {
+      succeed
+    }
+
+    Scenario("scenario 2") {
+      succeed
+    }
+  }
+
+  ScenariosFor(testScenariosFor())
 }

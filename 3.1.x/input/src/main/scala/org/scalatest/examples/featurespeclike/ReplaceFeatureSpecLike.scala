@@ -63,4 +63,16 @@ class ReplaceFeatureSpecLike extends FeatureSpecLike with GivenWhenThen {
       assert(!tv.isOn)
     }
   }
+
+  def testScenariosFor(): Unit = {
+    scenario("scenario 1") {
+      succeed
+    }
+
+    scenario("scenario 2") {
+      succeed
+    }
+  }
+
+  scenariosFor(testScenariosFor())
 }

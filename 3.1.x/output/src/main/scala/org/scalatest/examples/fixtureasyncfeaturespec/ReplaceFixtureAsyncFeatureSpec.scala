@@ -73,5 +73,17 @@ class ReplaceFixtureAsyncFeatureSpec extends featurespec.FixtureAsyncFeatureSpec
       }
     }
   }
+
+  def testScenariosFor(): Unit = {
+    Scenario("scenario 1") { f =>
+      succeed
+    }
+
+    Scenario("scenario 2") { f =>
+      succeed
+    }
+  }
+
+  ScenariosFor(testScenariosFor())
 }
 
