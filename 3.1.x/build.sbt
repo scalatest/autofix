@@ -12,9 +12,9 @@ inThisBuild(
 skip in publish := true
 
 lazy val rules = project.settings(
-  moduleName := "autofix-3.1.0",
-  version := "1.0.0",
-  crossScalaVersions := List("2.13.0", "2.12.8", "2.11.12"),
+  moduleName := "autofix",
+  version := "3.1.0-M1",
+  crossScalaVersions := List("2.13.0", "2.12.9", "2.11.12"),
   organization := "org.scalatest",
     homepage := Some(url("https://github.com/scalatest/autofix")),
     licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
@@ -49,7 +49,7 @@ lazy val input = project.settings(
   skip in publish := true,
   libraryDependencies ++=
     Seq(
-      "org.scalatest" %% "scalatest" % "3.1.0-LOCAL14",
+      "org.scalatest" %% "scalatest" % "3.1.0-M1",
       "org.scalacheck" %% "scalacheck" % "1.14.0",
       "org.easymock" % "easymockclassextension" % "3.2",
       "org.jmock" % "jmock-legacy" % "2.8.3",
@@ -64,7 +64,7 @@ lazy val output = project.settings(
   skip in publish := true,
   libraryDependencies ++=
     Seq(
-      "org.scalatest" %% "scalatest" % "3.1.0-LOCAL14",
+      "org.scalatest" %% "scalatest" % "3.1.0-M1",
       "org.scalacheck" %% "scalacheck" % "1.14.0",
       "org.easymock" % "easymockclassextension" % "3.2",
       "org.jmock" % "jmock-legacy" % "2.8.3",
