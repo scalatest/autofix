@@ -1,4 +1,4 @@
-# Autofix for ScalaTest 3.0.x
+# Autofix for ScalaTest 3.1.x
 Auto-fixing error due to version upgrade, good practice etc.
 
 To use this plugin, please follows these steps: 
@@ -12,7 +12,7 @@ addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.9.4")
   - Add the following settings in your project: 
   
 ```
-scalafixDependencies in ThisBuild += "org.scalatest" %% "autofix-3.1.0" % "1.0.0", 
+scalafixDependencies in ThisBuild += "org.scalatest" %% "autofix" % "3.1.0-M1", 
 addCompilerPlugin(scalafixSemanticdb) // enable SemanticDB
 ``` 
 
