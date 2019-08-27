@@ -49,5 +49,17 @@ class ReplaceFixtureFeatureSpec extends featurespec.FixtureAnyFeatureSpec {
       f.writer.flush()
       assert(f.file.length === 52)
     }
-  } 
+  }
+
+  def testScenariosFor(): Unit = {
+    Scenario("scenario 1") { f =>
+      succeed
+    }
+
+    Scenario("scenario 2") { f =>
+      succeed
+    }
+  }
+
+  ScenariosFor(testScenariosFor())
 }

@@ -42,5 +42,17 @@ class ReplaceAsyncFeatureSpec extends AsyncFeatureSpec {
       assert(sum == 3)
     }
   }
+
+  def testScenariosFor(): Unit = {
+    scenario("scenario 1") {
+      succeed
+    }
+
+    scenario("scenario 2") {
+      succeed
+    }
+  }
+
+  scenariosFor(testScenariosFor())
 }
 

@@ -39,5 +39,17 @@ class ReplaceAsyncFeatureSpecLike extends AsyncFeatureSpecLike {
       assert(sum == 3)
     }
   }
+
+  def testScenariosFor(): Unit = {
+    Scenario("scenario 1") {
+      succeed
+    }
+
+    Scenario("scenario 2") {
+      succeed
+    }
+  }
+
+  ScenariosFor(testScenariosFor())
 }
 

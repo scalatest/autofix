@@ -75,5 +75,17 @@ class ReplaceFixtureAsyncFeatureSpecLike extends fixture.AsyncFeatureSpecLike {
       }
     }
   }
+
+  def testScenariosFor(): Unit = {
+    scenario("scenario 1") { f =>
+      succeed
+    }
+
+    scenario("scenario 2") { f =>
+      succeed
+    }
+  }
+
+  scenariosFor(testScenariosFor())
 }
 

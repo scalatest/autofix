@@ -76,4 +76,16 @@ class ReplaceAsyncFeatureSpec2 extends AsyncFeatureSpec with GivenWhenThen {
       futureBoolean map { isOn => assert(!isOn) }
     }
   }
+
+  def testScenariosFor(): Unit = {
+    scenario("scenario 1") {
+      succeed
+    }
+
+    scenario("scenario 2") {
+      succeed
+    }
+  }
+
+  scenariosFor(testScenariosFor())
 }

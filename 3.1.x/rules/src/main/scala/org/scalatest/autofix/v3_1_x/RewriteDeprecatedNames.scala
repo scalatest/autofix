@@ -173,7 +173,11 @@ class RewriteDeprecatedNames extends SemanticRule("RewriteDeprecatedNames") {
       "org/scalatest/featurespec/AsyncFeatureSpecLike#" -> "feature" -> "Feature",
       "org/scalatest/featurespec/AsyncFeatureSpecLike#" -> "scenario" -> "Scenario",
       "org/scalatest/featurespec/FixtureAsyncFeatureSpecLike#" -> "feature" -> "Feature",
-      "org/scalatest/featurespec/FixtureAsyncFeatureSpecLike#" -> "scenario" -> "Scenario"
+      "org/scalatest/featurespec/FixtureAsyncFeatureSpecLike#" -> "scenario" -> "Scenario",
+      "org/scalatest/featurespec/AnyFeatureSpecLike#" -> "scenariosFor" -> "ScenariosFor",
+      "org/scalatest/featurespec/FixtureAnyFeatureSpecLike#" -> "scenariosFor" -> "ScenariosFor",
+      "org/scalatest/featurespec/AsyncFeatureSpecLike#" -> "scenariosFor" -> "ScenariosFor",
+      "org/scalatest/featurespec/FixtureAsyncFeatureSpecLike#" -> "scenariosFor" -> "ScenariosFor"
     )
 
     replaceDeprecatedClassesPatch + replaceDeprecatedMethodsPatch

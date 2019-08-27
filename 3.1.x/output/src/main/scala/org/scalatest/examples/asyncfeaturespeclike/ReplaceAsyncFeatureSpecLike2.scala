@@ -74,4 +74,16 @@ class ReplaceAsyncFeatureSpecLike2 extends AsyncFeatureSpecLike with GivenWhenTh
       futureBoolean map { isOn => assert(!isOn) }
     }
   }
+
+  def testScenariosFor(): Unit = {
+    Scenario("scenario 1") {
+      succeed
+    }
+
+    Scenario("scenario 2") {
+      succeed
+    }
+  }
+
+  ScenariosFor(testScenariosFor())
 }
