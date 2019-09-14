@@ -16,7 +16,7 @@ rule = RewriteDeprecatedNames
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.scalatest.examples.fixturesuite
+package org.scalatest.examples.fixturetestsuite
 
 import org.scalatest.fixture.TestSuite
 import org.scalatest.Outcome
