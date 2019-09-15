@@ -1,5 +1,9 @@
 # Autofix for ScalaTest 3.0.x
-Auto-fixing error due to version upgrade, good practice etc.
+This scalafix application will rewrite your ScalaTest code to eliminate most of the deprecation warnings
+introduced in ScalaTest 3.0.8. The deprecations were primarily renames of packages containing integrations with
+third-party libraries, such as JUnit, TestNG, Java mocking frameworks, Selenium, and ScalaCheck. The purpose
+of these renames in 3.0.8 is to prepare the way for modularization of these third-party integrations in 
+ScalaTest 3.1.0. This will allow the third-party integrations to be versioned independently with ScalaTest.
 
 To use this plugin, please follows these steps: 
 
