@@ -13,13 +13,15 @@ To use this plugin, please follows these steps:
 addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.9.4")
 ```
 
-  - Add the following settings to your `build.sbt` or, if you don't have a `build.sbt`, to `project/your-build-file.sbt`: 
+  - Add the following settings to your `build.sbt` or, if you don't have a `build.sbt`:
   
 ```
 scalafixDependencies in ThisBuild += "org.scalatest" %% "autofix-3.0.8" % "1.0.0" 
 
 addCompilerPlugin(scalafixSemanticdb) // enable SemanticDB
 ``` 
+
+  - Or, if your project doesn't use a `build.sbt`, you'll need to make the above changes to `project/your-build-file.sbt`.
 
   - If you have `-Xfatal-warnings` set, comment it out for the scalafix process, because otherwise
     the deprecation warnings will stop your build before autofix is given a chance to fix them.
