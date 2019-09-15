@@ -38,7 +38,7 @@ sbt> scalafix RenameDeprecatedPackage
 
   - Check the changes made with `git diff`.
 
-  - If you turned `fatal-warnings` earlier, you can turn it back on now:
+  - If you turned `-Xfatal-warnings` off earlier, you can turn it back on now:
 
 ```
 scalacOptions += "-Xfatal-warnings"
