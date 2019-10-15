@@ -5,7 +5,7 @@ pave the way for the internal modularization of ScalaTest in 3.2.0. The internal
 will allow projects to depend on a chosen subset of ScalaTest in their build to more easily keep test code
 consistent across the project.
 
-To use this plugin, please follows these steps: 
+To use this plugin with sbt, please follows these steps (for Maven, use the <a href="https://github.com/evis/scalafix-maven-plugin">scalafix-maven-plugin</a>): 
 
   - Add `sbt-scalafix` to your `project/plugins.sbt`:
 

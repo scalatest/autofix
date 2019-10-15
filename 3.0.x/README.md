@@ -5,7 +5,7 @@ third-party libraries, such as JUnit, TestNG, Java mocking frameworks, Selenium,
 of these renames in 3.0.8 is to prepare the way for modularization of these third-party integrations in 
 ScalaTest 3.1.0. This will allow the third-party integrations to be versioned independently with ScalaTest.
 
-To use this plugin, please follows these steps: 
+To use this plugin, please follows these steps (for Maven, use the <a href="https://github.com/evis/scalafix-maven-plugin">scalafix-maven-plugin</a>): 
 
   - Add `sbt-scalafix` to your `project/plugins.sbt`:
 
