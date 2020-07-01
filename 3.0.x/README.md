@@ -13,7 +13,7 @@ To use this plugin, please follows these steps (for Maven, use the <a href="http
 addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.9.4")
 ```
 
-  - Add the following settings to your `build.sbt` or, if you don't have a `build.sbt`:
+  - Add the following settings to your `build.sbt`:
   
 ```
 scalafixDependencies in ThisBuild += "org.scalatest" %% "autofix-3.0.8" % "1.0.0" 
