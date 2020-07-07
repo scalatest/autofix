@@ -10,7 +10,7 @@ To use this plugin with sbt, please follows these steps (for Maven, use the <a h
   - Add `sbt-scalafix` to your `project/plugins.sbt`:
 
 ```
-addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.9.4")
+addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.9.11")
 ```
 
   - Add the following settings to your `build.sbt`:

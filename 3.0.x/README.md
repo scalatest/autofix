@@ -10,13 +10,13 @@ To use this plugin, please follows these steps (for Maven, use the <a href="http
   - Add `sbt-scalafix` to your `project/plugins.sbt`:
 
 ```
-addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.9.4")
+addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.9.11")
 ```
 
   - Add the following settings to your `build.sbt`:
   
 ```
-scalafixDependencies in ThisBuild += "org.scalatest" %% "autofix-3.0.8" % "1.0.0" 
+scalafixDependencies in ThisBuild += "org.scalatest" %% "autofix" % "3.0.8-0"
 
 addCompilerPlugin(scalafixSemanticdb) // enable SemanticDB
 ``` 
