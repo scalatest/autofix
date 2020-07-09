@@ -14,7 +14,7 @@ skip in publish := true
 lazy val rules = project.settings(
   moduleName := "autofix",
   version := "3.0.8-0",
-  crossScalaVersions := List("2.13.3", "2.12.8", "2.11.12"),
+  crossScalaVersions := List("2.13.3", "2.12.11", "2.11.12"),
   organization := "org.scalatest",
     homepage := Some(url("https://github.com/scalatest/autofix")),
     licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
@@ -78,6 +78,8 @@ lazy val output = project.settings(
 lazy val tests = project
   .settings(
     skip in publish := true,
+    resolvers += Resolver.sonatypeRepo("releases"), 
+    crossScalaVersions := List("2.13.3", "2.12.11", "2.11.12"),
     libraryDependencies += "ch.epfl.scala" % "scalafix-testkit" % V.scalafixVersion % Test cross CrossVersion.full,
     scalafixTestkitOutputSourceDirectories :=
       sourceDirectories.in(output, Compile).value,
