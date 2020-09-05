@@ -30,7 +30,7 @@ sbt> scalafixEnable
   - In the sbt prompt, issue the following command to have autofix applied to your main & test source files: 
   
 ```
-sbt> scalafixAll dependency:RewriteDeprecatedNames@org.scalatest:autofix:3.1.0.0
+sbt> scalafixAll dependency:RewriteDeprecatedNames@org.scalatest:autofix:3.1.0.1
 ```
 
   - Check the changes made with `git diff`.
